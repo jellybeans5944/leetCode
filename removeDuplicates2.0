@@ -1,0 +1,10 @@
+var removeDuplicates = function(nums){
+    
+    for(let i = 0; i < nums.length; i++){
+        if(nums[i] == nums[i+1]){
+            nums.splice(i+1,1); // remove the index that has a duplicate
+            i--; // go back to the last index to compare the next index
+        }
+    }
+    return nums.length;
+};
